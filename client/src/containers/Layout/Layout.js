@@ -1,7 +1,6 @@
 import React from "react";
-import { Routes, Route, Navigate,useRoutes } from "react-router-dom";
 // creates a beautiful scrollbar
-import PerfectScrollbar from "perfect-scrollbar";
+// import PerfectScrollbar from "perfect-scrollbar";
 import "perfect-scrollbar/css/perfect-scrollbar.css";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -18,7 +17,7 @@ import styles from "../../assets/jss/material-dashboard-react/layouts/adminStyle
 import bgImage from "../../assets/img/sidebar-2.jpg";
 import logo from "../../assets/img/reactlogo.png";
 
-let ps;
+// let ps;
 
 const useStyles = makeStyles(styles);
 

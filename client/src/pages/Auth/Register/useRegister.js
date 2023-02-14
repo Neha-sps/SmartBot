@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   isRegister,
@@ -23,12 +23,12 @@ const useRegister =()=>{
       ...prevState,
       [name] : value
     }))
-  });
+  },[]);
 
   const handleRegister = useCallback((e) => {
     e.preventDefault();
     dispatch(isRegister(state));
-  });
+  },[dispatch, state]);
 
   return {
     state,
