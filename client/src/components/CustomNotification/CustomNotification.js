@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useSelector } from "react-redux";
 // import { makeStyles } from "@material-ui/core/styles";
-import AddAlert from "@material-ui/icons/AddAlert";
+// import AddAlert from "@material-ui/icons/AddAlert";
 import Snackbar from "../Snackbar/Snackbar";
 import customNotificationSelectors from "../../redux/selectors/customNotification.selectors";
 

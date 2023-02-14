@@ -10,7 +10,7 @@ const useLogin =()=>{
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { logedIn } = useSelector(authSelectors);
-  const { data, isSuccessful, isLoading } = logedIn;
+  const { isSuccessful } = logedIn;
  
   const [state , setState] = useState({
     email : "",
@@ -23,22 +23,22 @@ const useLogin =()=>{
       ...prevState,
       [name] : value
     }))
-  });
+  },[]);
 
   const handleLogin = useCallback((e) => {
     e.preventDefault();
     if(state.email !== "" && state.password !== "") {
       dispatch(isLogin(state))
     }
-  });
+  },[dispatch, state]);
   const handelNavigate = useCallback((pathname) => {
     navigate(pathname);
-  }, []);
+  }, [navigate]);
   useEffect(() =>{
     if(isSuccessful){
       handelNavigate('/dashboard')
     }
-  },[isSuccessful])
+  },[isSuccessful, handelNavigate])
   return {
     state,
     handleInputChange,
